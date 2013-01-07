@@ -1,6 +1,6 @@
 <header>
   <span class="logo"/>
-  <h3>Ccs in ticket</h3>
+  <h3>Ccs in ticket <small></small></h3>
 </header>
 
 <section data-main />

@@ -19,9 +19,12 @@
         },
 
         displayCollaborators: function(){
-            var collaborators = this.ticket().collaborators();
+            var collaborators = this.ticket().collaborators(),
+            collaborator_size = _.size(collaborators);
 
-            if (_.size(collaborators) > 0) {
+            if (collaborator_size > 0) {
+                this.$('h3 small').text('('+ collaborator_size +')');
+
                 this.switchTo('collaborators', {
                     collaborators: _.map(collaborators, function(cc){
                         return cc.name();
