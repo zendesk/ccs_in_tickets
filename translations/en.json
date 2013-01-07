@@ -1,0 +1,5 @@
+{
+    "app": {
+        "Description": "Notify the agent that there are CCs in current ticket"
+    }
+}
