@@ -1,0 +1,9 @@
+<div>
+  <p>{{t "explanation"}}</p>
+  <ul>
+    {{#each collaborators}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  <p>{{t "warning"}}</p>
+</div>
