@@ -26,8 +26,8 @@
             if (collaborator_size > 0) {
                 this.$('h3 small').html('<strong>('+ collaborator_size +')</strong>');
 
-                _.times(6, function(){
-                    this.$('header').fadeToggle('slow');
+                _.times(4, function(){
+                    this.$('header .logo').fadeToggle('slow');
                 }, this);
 
                 this.switchTo('collaborators', {
