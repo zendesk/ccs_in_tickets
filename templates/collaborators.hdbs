@@ -1,4 +1,4 @@
-<div class="alert alert-block">
+<div class="alert alert-error">
   <p><strong>{{t "explanation"}}</strong></p>
   <ul>
     {{#each collaborators}}

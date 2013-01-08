@@ -32,7 +32,7 @@
 
                 this.switchTo('collaborators', {
                     collaborators: _.map(collaborators, function(cc){
-                        return "" + cc.name() + " - " + cc.email();
+                        return cc.email();
                     })
                 });
             }
