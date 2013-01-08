@@ -1,7 +1,8 @@
 {
     "app": {
-        "Description": "Notify the agent that there are CCs in the current ticket."
+        "description": "Notify the agent that there are CCs in the current ticket."
     },
+
     "explanation": "Some users are cced in this ticket:",
     "warning": "Please consider this when responding!"
 }
