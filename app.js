@@ -27,8 +27,8 @@
                 this.$('h3 small').html('<strong>('+ collaborator_size +')</strong>');
 
                 _.times(6, function(){
-                    this.$('h3 small').fadeToggle('slow');
-                });
+                    this.$('header').fadeToggle('slow');
+                }, this);
 
                 this.switchTo('collaborators', {
                     collaborators: _.map(collaborators, function(cc){
