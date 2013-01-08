@@ -1,9 +1,8 @@
-<div>
-  <p>{{t "explanation"}}</p>
+<div class="alert alert-block">
+  <p><strong>{{t "explanation"}}</strong></p>
   <ul>
     {{#each collaborators}}
-    <li>{{this}}</li>
+    <li><strong>{{this}}</strong></li>
     {{/each}}
   </ul>
-  <p>{{t "warning"}}</p>
 </div>

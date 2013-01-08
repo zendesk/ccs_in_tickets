@@ -2,8 +2,9 @@
     return {
 
         events: {
-            'app.activated':               'onActivated',
-            'ticket.status.changed':       'loadIfDataReady'
+            'app.activated':                    'onActivated',
+            'ticket.status.changed':            'loadIfDataReady',
+            'ticket.collaborators.changed':     'displayCollaborators'
         },
 
         onActivated: function() {
@@ -12,7 +13,7 @@
         },
 
         loadIfDataReady: function() {
-            if ( !this.doneLoading && this.ticket() !== null) {
+            if (!this.doneLoading && this.ticket() !== null) {
                 this.doneLoading = true;
                 this.displayCollaborators();
             }
@@ -23,11 +24,15 @@
             collaborator_size = _.size(collaborators);
 
             if (collaborator_size > 0) {
-                this.$('h3 small').text('('+ collaborator_size +')');
+                this.$('h3 small').html('<strong>('+ collaborator_size +')</strong>');
+
+                _.times(6, function(){
+                    this.$('h3 small').fadeToggle('slow');
+                });
 
                 this.switchTo('collaborators', {
                     collaborators: _.map(collaborators, function(cc){
-                        return cc.name();
+                        return "" + cc.name() + " - " + cc.email();
                     })
                 });
             }
