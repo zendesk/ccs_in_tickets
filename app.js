@@ -26,15 +26,15 @@
             if (collaborator_size > 0) {
                 this.$('h3 small').html('<strong>('+ collaborator_size +')</strong>');
 
-                _.times(4, function(){
-                    this.$('header .logo').fadeToggle('slow');
-                }, this);
-
                 this.switchTo('collaborators', {
                     collaborators: _.map(collaborators, function(cc){
                         return cc.email();
                     })
                 });
+
+                _.times(4, function(){
+                    this.$('.alert').fadeToggle('slow');
+                }, this);
             }
         }
 
