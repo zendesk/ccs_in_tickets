@@ -3,5 +3,7 @@
         "description": "Notify the agent that there are CCs in the current ticket."
     },
 
+    "toggle-hide": "hide",
+    "toggle-show": "show",
     "explanation": "Take note that this ticket has the following CCs:"
 }

@@ -1,5 +1,14 @@
-h3 small{
-  color: #B94A48;
+h3 small {
+  color:  #FF9900;
+}
+
+h3 span {
+  font-size: 10px;
+}
+
+.alert {
+  color: #555;
+  background-color: #FF9900;
 }
 
 ul {

@@ -2,9 +2,10 @@
     return {
 
         events: {
-            'app.activated':                    'onActivated',
-            'ticket.status.changed':            'loadIfDataReady',
-            'ticket.collaborators.changed':     'displayCollaborators'
+            'app.activated'                     : 'onActivated',
+            'ticket.status.changed'             : 'loadIfDataReady',
+            'ticket.collaborators.changed'      : 'displayCollaborators',
+            'click .toggle'                     : 'toggleApp'
         },
 
         onActivated: function() {
@@ -15,7 +16,25 @@
         loadIfDataReady: function() {
             if (!this.doneLoading && this.ticket() !== null) {
                 this.doneLoading = true;
+                this.ensureTrayVisibility();
                 this.displayCollaborators();
+            }
+        },
+
+        ensureTrayVisibility: function(){
+            var tray = services.appsTray();
+
+            if (!tray.isVisible())
+                tray.show();
+        },
+
+        toggleApp: function(){
+            if (this.$('section[data-main]').is(':visible')){
+                this.$('section[data-main]').hide();
+                this.$('.toggle').text(this.I18n.t('toggle-show'));
+            } else {
+                this.$('section[data-main]').show();
+                this.$('.toggle').text(this.I18n.t('toggle-hide'));
             }
         },
 
@@ -32,7 +51,7 @@
                     })
                 });
 
-                _.times(4, function(){
+                _.times(8, function(){
                     this.$('.alert').fadeToggle('slow');
                 }, this);
             }
