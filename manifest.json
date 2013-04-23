@@ -1,11 +1,11 @@
 {
-    "author": {
-        "name": "Pierre Nespo",
-        "email": "pierre.nespo@gmail.com"
-    },
+  "author": {
+    "name": "Pierre Nespo",
+    "email": "pierre.nespo@gmail.com"
+  },
 
-    "frameworkVersion": "0.5",
-    "location": "ticket_sidebar",
-    "defaultLocale": "en",
-    "private": true
+  "frameworkVersion": "0.5",
+  "location": ["ticket_sidebar", "new_ticket_sidebar"],
+  "defaultLocale": "en",
+  "private": true
 }
