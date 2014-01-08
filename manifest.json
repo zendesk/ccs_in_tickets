@@ -1,11 +1,13 @@
 {
   "author": {
-    "name": "Pierre Nespo",
-    "email": "pierre.nespo@gmail.com"
+    "name": "Zendesk Services / Pierre Nespo",
+    "email": "services@zendesk.com"
   },
 
-  "frameworkVersion": "0.5",
-  "location": ["ticket_sidebar", "new_ticket_sidebar"],
+  "frameworkVersion": "1.0",
+  "version": "1.0",
+  "location": [ "ticket_sidebar", "new_ticket_sidebar" ],
   "defaultLocale": "en",
-  "private": true
+  "private": true,
+  "singleInstall": true
 }
